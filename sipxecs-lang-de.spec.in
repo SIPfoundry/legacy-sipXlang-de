@@ -6,7 +6,7 @@ Release: @PACKAGE_REVISION@
 # do not build a debuginfo package
 %define debug_package %{nil}
 
-Summary: sipXecs auf Deutsch
+Summary: sipXecs for Germany
 License: L-GPL
 Group: Telecommunications
 Vendor: SIPfoundry
@@ -22,7 +22,7 @@ Prefix: %_prefix
 BuildRoot: %{_tmppath}/%name-%version-root
 
 %description
-TODO: Need German Translation : sipXecs German localization files for admin web interface, user portal and voice prompts. 
+sipXecs German localization files for admin web interface, user portal and voice prompts. 
 
 %prep
 %setup -q
@@ -40,7 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_datadir}/www/doc/stdprompts_de/*
+%{_datadir}/www/doc/stdprompts_@LANG_ID@/*
 %{_datadir}/java/sipXecs/sipXcommons/*
 
 %post
